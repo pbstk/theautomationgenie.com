@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Automation Genie</title>
+  <!-- Bootstrap CSS for quick styling -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Additional custom styles */
+    body {
+      font-family: Arial, sans-serif;
+      padding-top: 20px;
+    }
+    .header {
+      text-align: center;
+      padding: 50px;
+      background-color: #f8f9fa;
+    }
+    .content {
+      padding: 20px;
+    }
+    .footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #343a40;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <div class="header">
+    <h1>Welcome to The Automation Genie</h1>
+    <p>Your go-to resource for automation insights and solutions.</p>
+  </div>
+
+  <!-- Content Section with Images and Text -->
+  <div class="content container">
+    <h2>About Us</h2>
+    <p>We specialize in automation solutions that make life easier. Explore our resources and tips to optimize your workflows.</p>
+    <img src="https://via.placeholder.com/800x400" class="img-fluid" alt="Placeholder Image">
+    
+    <h2>Our Services</h2>
+    <ul>
+      <li>Automation Consulting</li>
+      <li>Project Management</li>
+      <li>Customized Solutions</li>
+    </ul>
+  </div>
+
+  <!-- Footer Section -->
+  <div class="footer">
+    <p>&copy; 2024 The Automation Genie. Follow us on 
+      <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+    </p>
+  </div>
+
+  <!-- jQuery, Bootstrap JS, and Font Awesome for interactivity -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
