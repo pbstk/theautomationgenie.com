@@ -13,58 +13,141 @@
     body {
       font-family: Arial, sans-serif;
       padding-top: 20px;
+      background-color: #f8f9fa;
     }
+
     .header {
-       text-align: center;
-  padding: 100px 20px;
-  background-image: url('https://theautomationgenie.com/header-image.jpg'); /* Replace with your image URL */
-  background-size: cover;
-  background-position: center;
-  color: white; /* Ensures text is visible on dark images */
+      text-align: center;
+      padding: 100px 20px;
+      background-image: url('https://theautomationgenie.com/header-image.jpg'); /* Replace with your image URL */
+      background-size: cover;
+      background-position: center;
+      color: white; /* Ensures text is visible on dark images */
+      animation: fadeIn 2s ease-in-out;
     }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      animation: slideIn 1.5s ease-out;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
     .content {
-      padding: 20px;
+      padding: 40px 20px;
+      animation: fadeInUp 1.5s ease-out;
     }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     .footer {
       text-align: center;
-      padding: 10px;
+      padding: 20px;
       background-color: #343a40;
       color: white;
+    }
+
+    .footer a {
+      margin: 0 10px;
+      color: white;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+      color: #17a2b8;
+    }
+
+    .img-hover {
+      transition: transform 0.3s ease;
+    }
+
+    .img-hover:hover {
+      transform: scale(1.05);
+    }
+
+    /* Button Styling */
+    .btn-genie {
+      background-color: #17a2b8;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-genie:hover {
+      background-color: #007b8d;
+      transform: scale(1.05);
+    }
+
+    .services-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .services-list li {
+      margin: 10px 0;
+      font-size: 1.1rem;
     }
   </style>
 </head>
 <body>
+
   <!-- Header Section -->
   <div class="header">
     <h1>Welcome to The Automation Genie</h1>
     <p>Your go-to resource for automation insights and solutions.</p>
+    <a href="#services" class="btn btn-genie">Explore Our Services</a>
   </div>
 
   <!-- Content Section with Images and Text -->
   <div class="content container">
     <h2>About Us</h2>
     <p>At AutomationGenie, we pioneer in automated script translation, empowering businesses to seamlessly convert their TCL scripts to Python with 100% accuracy. Our advanced, rule-based approach ensures that every line of code translates flawlessly, saving you time, reducing human error, and enhancing productivity.</p>
-    <img src="https://via.placeholder.com/800x400" class="img-fluid" alt="Placeholder Image">
-    
+    <img src="https://via.placeholder.com/800x400" class="img-fluid img-hover" alt="Placeholder Image">
+
     <h2>Our Services</h2>
-    <ul>
+    <ul class="services-list">
       <li>Automation Consulting</li>
       <li>Project Management</li>
       <li>Customized Solutions</li>
-      <p>The Genie is used to generate the target Language. The transformation is based on rules and
-        code styles and is in compiled state to be deployed on an application server supporting the new
-        object-oriented code. No business logic or application functionality is changed as part of the
-        transformation.Conversions are complicated, but with our genie in place we meet the customers
-        expectations and also ease the process of conversion.</p>
     </ul>
-      <h2>Why Choose AutomationGenie</h2>
-    <p>
-      <ul>
+    <p>The Genie is used to generate the target language. The transformation is based on rules and code styles and is compiled to be deployed on an application server supporting the new object-oriented code. No business logic or application functionality is changed as part of the transformation. Conversions are complicated, but with our genie in place, we meet customer expectations and ease the conversion process.</p>
+
+    <h2>Why Choose AutomationGenie</h2>
+    <ul class="services-list">
       <li>100% Accuracy: Our rule-based engine ensures precise translation without compromising the code's integrity.</li>
-<li>Scalable Framework: Beyond TCL to Python, our tool is adaptable for future expansions in other languages.</li>
-<li>Future-Proof Technology: Transition legacy scripts with confidence, future-proofing your codebase with our robust solutions.</li>
-      </ul>ul>
-      </p>
+      <li>Scalable Framework: Beyond TCL to Python, our tool is adaptable for future expansions in other languages.</li>
+      <li>Future-Proof Technology: Transition legacy scripts with confidence, future-proofing your codebase with our robust solutions.</li>
+    </ul>
   </div>
 
   <!-- Footer Section -->
