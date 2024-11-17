@@ -136,6 +136,17 @@
     <p>At Automation Genie, we pioneer in automated script translation, empowering businesses to seamlessly convert their TCL scripts to Python with 100% accuracy. Our advanced, rule-based approach ensures that every line of code translates flawlessly, saving you time, reducing human error, and enhancing productivity.</p>
 
     <h2>Our Capabilities</h2>
+    <div class="expandable-box">
+  <h2 class="mb-0 d-flex justify-content-between align-items-center">
+    <button class="btn btn-link text-white" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+      Legacy Code Analysis
+    </button>
+    <i class="fas fa-plus"></i><i class="fas fa-minus" style="display:none;"></i>
+  </h2>
+  <div id="collapse1" class="collapse">
+    <p>Understanding your existing codebase is our first step toward providing a comprehensive solution.</p>
+  </div>
+</div>
     <div class="accordion" id="capabilitiesAccordion">
       <div class="card">
         <div class="card-header" id="headingOne">
@@ -251,5 +262,19 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- jQuery for interactivity -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+  $(document).ready(function() {
+    // Toggle the plus/minus icons when the collapsible sections open or close
+    $('.collapse').on('show.bs.collapse', function () {
+      $(this).prev().find('.fa-plus').hide();
+      $(this).prev().find('.fa-minus').show();
+    }).on('hide.bs.collapse', function () {
+      $(this).prev().find('.fa-plus').show();
+      $(this).prev().find('.fa-minus').hide();
+    });
+  });
+</script>
 </body>
 </html>
