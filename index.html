@@ -53,18 +53,6 @@
 
     .content {
       padding: 40px 20px;
-      animation: fadeInUp 1.5s ease-out;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     .footer {
@@ -85,31 +73,20 @@
       color: #17a2b8;
     }
 
-    .expandable-box {
-      background-color: #ff7e5f;
-      color: white;
+    .highlight {
+      background-color: #f8f9fa;
       padding: 20px;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-bottom: 15px;
-      transition: all 0.3s ease;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 20px;
     }
 
-    .expandable-box:hover {
-      background-color: #feb47b;
+    .highlight h4 {
+      color: #17a2b8;
     }
 
-    .box-content {
-      display: none;
-      margin-top: 15px;
-      background-color: #ffffff;
-      color: #333;
-      padding: 15px;
-      border-radius: 8px;
-    }
-
-    .expandable-box.active .box-content {
-      display: block;
+    .highlight p {
+      margin: 0;
     }
   </style>
 </head>
@@ -125,42 +102,26 @@
   <div class="content container">
     <h2>About Us</h2>
     <p>At Automation Genie, we pioneer in automated script translation, empowering businesses to seamlessly convert their TCL scripts to Python with 100% accuracy. Our advanced, rule-based approach ensures that every line of code translates flawlessly, saving you time, reducing human error, and enhancing productivity.</p>
-    
-    <h2>Our Capabilities</h2>
-    <div class="expandable-box" id="service1">
-      <h4>Automated Code Conversion</h4>
-      <div class="box-content">
-        <p>Our framework ensures high accuracy and minimal disruption during migration.</p>
-      </div>
-    </div>
-
-    <div class="expandable-box" id="service2">
-      <h4>Scalable Modern Solutions</h4>
-      <div class="box-content">
-        <p>Post-conversion, we optimize your code for cloud readiness, scalability, and maintainability.</p>
-      </div>
-    </div>
 
     <h2>Why Choose Automation Genie</h2>
-    <div class="expandable-box" id="reason1">
+    <div class="highlight">
       <h4>Proven Expertise</h4>
-      <div class="box-content">
-        <p>With a robust proof-of-concept (PoC) for converting TCL to Python, we demonstrate the power and flexibility of our approach.</p>
-      </div>
+      <p>With a robust proof-of-concept (PoC) for converting TCL to Python, we demonstrate the power and flexibility of our approach.</p>
     </div>
 
-    <div class="expandable-box" id="reason2">
+    <div class="highlight">
       <h4>Generic Framework</h4>
-      <div class="box-content">
-        <p>Our innovative framework can adapt to any legacy language, enabling seamless translation to modern programming languages like Python, Go, or Java.</p>
-      </div>
+      <p>Our innovative framework can adapt to any legacy language, enabling seamless translation to modern programming languages like Python, Go, or Java.</p>
     </div>
 
-    <div class="expandable-box" id="reason3">
+    <div class="highlight">
       <h4>Automation-Powered Efficiency</h4>
-      <div class="box-content">
-        <p>Our process automates the majority of the code migration, reducing manual effort, errors, and time-to-market.</p>
-      </div>
+      <p>Our process automates the majority of the code migration, reducing manual effort, errors, and time-to-market.</p>
+    </div>
+
+    <div class="highlight">
+      <h4>Cost-Effective Modernization</h4>
+      <p>Save on operational costs by moving away from outdated systems and enhancing maintainability and performance.</p>
     </div>
 
     <h2>Contact Us</h2>
@@ -176,14 +137,5 @@
     </p>
   </div>
 
-  <!-- jQuery and Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      $(".expandable-box").click(function() {
-        $(this).toggleClass("active");
-      });
-    });
-  </script>
 </body>
 </html>
