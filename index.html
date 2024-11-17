@@ -72,22 +72,6 @@
     .footer a:hover {
       color: #17a2b8;
     }
-
-    .highlight {
-      background-color: #f8f9fa;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      margin-bottom: 20px;
-    }
-
-    .highlight h4 {
-      color: #17a2b8;
-    }
-
-    .highlight p {
-      margin: 0;
-    }
   </style>
 </head>
 <body>
@@ -103,26 +87,73 @@
     <h2>About Us</h2>
     <p>At Automation Genie, we pioneer in automated script translation, empowering businesses to seamlessly convert their TCL scripts to Python with 100% accuracy. Our advanced, rule-based approach ensures that every line of code translates flawlessly, saving you time, reducing human error, and enhancing productivity.</p>
 
+    <h2>Our Capabilities</h2>
+    <div class="accordion" id="capabilitiesAccordion">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-link text-dark" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Legacy Code Analysis
+            </button>
+          </h2>
+        </div>
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#capabilitiesAccordion">
+          <div class="card-body">
+            Understanding your existing codebase is our first step toward providing a comprehensive solution.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn btn-link text-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Automated Code Conversion
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#capabilitiesAccordion">
+          <div class="card-body">
+            Our framework ensures high accuracy and minimal disruption during migration.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button class="btn btn-link text-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Scalable Modern Solutions
+            </button>
+          </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#capabilitiesAccordion">
+          <div class="card-body">
+            Post-conversion, we optimize your code for cloud readiness, scalability, and maintainability.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingFour">
+          <h2 class="mb-0">
+            <button class="btn btn-link text-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Custom Solutions
+            </button>
+          </h2>
+        </div>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#capabilitiesAccordion">
+          <div class="card-body">
+            Whether you’re looking to modernize a specific application or transform your entire tech stack, we’re here to help.
+          </div>
+        </div>
+      </div>
+    </div>
+
     <h2>Why Choose Automation Genie</h2>
-    <div class="highlight">
-      <h4>Proven Expertise</h4>
-      <p>With a robust proof-of-concept (PoC) for converting TCL to Python, we demonstrate the power and flexibility of our approach.</p>
-    </div>
-
-    <div class="highlight">
-      <h4>Generic Framework</h4>
-      <p>Our innovative framework can adapt to any legacy language, enabling seamless translation to modern programming languages like Python, Go, or Java.</p>
-    </div>
-
-    <div class="highlight">
-      <h4>Automation-Powered Efficiency</h4>
-      <p>Our process automates the majority of the code migration, reducing manual effort, errors, and time-to-market.</p>
-    </div>
-
-    <div class="highlight">
-      <h4>Cost-Effective Modernization</h4>
-      <p>Save on operational costs by moving away from outdated systems and enhancing maintainability and performance.</p>
-    </div>
+    <ul>
+      <li><b>Proven Expertise:</b> With a robust proof-of-concept (PoC) for converting TCL to Python, we demonstrate the power and flexibility of our approach.</li>
+      <li><b>Generic Framework:</b> Our innovative framework can adapt to any legacy language, enabling seamless translation to modern programming languages like Python, Go, or Java.</li>
+      <li><b>Automation-Powered Efficiency:</b> Our process automates the majority of the code migration, reducing manual effort, errors, and time-to-market.</li>
+      <li><b>Cost-Effective Modernization:</b> Save on operational costs by moving away from outdated systems and enhancing maintainability and performance.</li>
+    </ul>
 
     <h2>Contact Us</h2>
     <p><b>Email:</b> sameeraja@theautomationgenie.com</p>
@@ -137,5 +168,9 @@
     </p>
   </div>
 
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
