@@ -17,15 +17,37 @@
     }
 
     .header {
+      position: relative;
       text-align: center;
       padding: 100px 20px;
-      background-image: url('https://theautomationgenie.com/images/automation_header.jpg'); /* Replace with your image URL */
+      background-image: url('https://theautomationgenie.com/images/automation_header.jpg');
       background-size: cover;
       background-position: center;
       color: white;
       animation: fadeIn 2s ease-in-out;
     }
-
+    
+    .header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity here */
+      z-index: 1;
+    }
+    
+    .header h1,
+    .header p {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .header h1, .header p {
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+    
     @keyframes fadeIn {
       from {
         opacity: 0;
