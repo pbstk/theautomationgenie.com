@@ -142,6 +142,17 @@
       padding: 15px;
       border-radius: 8px;
     }
+
+    .caret-icon {
+    font-size: 12px;
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+    }
+
+    .rotate {
+    transform: rotate(180deg);
+    }
+
   </style>
 </head>
 <body>
@@ -167,11 +178,11 @@ Our core framework is versatile and can be extended to facilitate translation be
         <div class="card-header" id="headingOne">
           <h2 class="mb-0">
             <button class="btn btn-link text-white" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Legacy Code Analysis and Assessment
+              Legacy Code Analysis and Assessment <span class="caret-icon fa fa-chevron-down"></span>
             </button>
           </h2>
         </div>
-        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#capabilitiesAccordion">
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#capabilitiesAccordion">
           <div class="card-body">
        <ul>
             <li><strong>Thorough System Analysis:</strong> We conduct an in-depth evaluation of your existing codebase to identify potential challenges and areas of improvement. Our analysis focuses on architecture, dependencies, security risks, and performance bottlenecks.</li>
@@ -184,7 +195,7 @@ Our core framework is versatile and can be extended to facilitate translation be
         <div class="card-header" id="headingTwo">
           <h2 class="mb-0">
             <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Automated Code Translation
+              Automated Code Translation <span class="caret-icon fa fa-chevron-down"></span>
             </button>
           </h2>
         </div>
@@ -201,7 +212,7 @@ Our core framework is versatile and can be extended to facilitate translation be
         <div class="card-header" id="headingThree">
           <h2 class="mb-0">
             <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-             Cloud Compatibility and Modernization
+             Cloud Compatibility and Modernization <span class="caret-icon fa fa-chevron-down"></span>
             </button>
           </h2>
         </div>
@@ -215,14 +226,14 @@ Our core framework is versatile and can be extended to facilitate translation be
         </div>
       </div>
       <div class="card">
-        <div class="card-header" id="headingThree">
+        <div class="card-header" id="headingFour">
           <h2 class="mb-0">
-            <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-             Seamless Integration and Testing
+            <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+             Seamless Integration and Testing <span class="caret-icon fa fa-chevron-down"></span>
             </button>
           </h2>
         </div>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#capabilitiesAccordion">
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#capabilitiesAccordion">
           <div class="card-body">
         <ul>
             <li><strong>Integration with Existing Systems:</strong> Post-modernization, we ensure that your new code integrates smoothly with your existing IT ecosystem, including databases, APIs, and external applications. This minimizes disruption and ensures that business operations continue uninterrupted.</li>
@@ -232,14 +243,14 @@ Our core framework is versatile and can be extended to facilitate translation be
         </div>
       </div>
       <div class="card">
-        <div class="card-header" id="headingFour">
+        <div class="card-header" id="headingFive">
           <h2 class="mb-0">
-            <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-              Continuous Support and Maintenance
+            <button class="btn btn-link text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              Continuous Support and Maintenance <span class="caret-icon fa fa-chevron-down"></span>
             </button>
           </h2>
         </div>
-        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#capabilitiesAccordion">
+        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#capabilitiesAccordion">
           <div class="card-body">
            <ul>
             <li><strong>Ongoing System Monitoring:</strong> After modernization, we offer continuous monitoring and performance tracking to ensure the long-term health of your applications. Proactive monitoring helps identify any issues early, ensuring a smooth and uninterrupted user experience.</li>
@@ -274,21 +285,28 @@ Our core framework is versatile and can be extended to facilitate translation be
   </div>
 
   <!-- jQuery and Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <!-- jQuery for interactivity -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
   $(document).ready(function() {
-    // Toggle the plus/minus icons when the collapsible sections open or close
-    $('.collapse').on('show.bs.collapse', function () {
-      $(this).prev().find('.fa-plus').hide();
-      $(this).prev().find('.fa-minus').show();
-    }).on('hide.bs.collapse', function () {
-      $(this).prev().find('.fa-plus').show();
-      $(this).prev().find('.fa-minus').hide();
-    });
+      // Toggle caret icon rotation on accordion click
+      $('.accordion .card-header button').on('click', function () {
+          // Remove 'rotate' class from other caret icons
+          $('.accordion .caret-icon').not($(this).find('.caret-icon')).removeClass('rotate');
+          // Toggle 'rotate' class on the clicked button's caret icon
+          $(this).find('.caret-icon').toggleClass('rotate');
+      });
+
+      // Update plus/minus icon visibility on collapse show/hide
+      $('.collapse').on('show.bs.collapse', function () {
+          $(this).prev().find('.fa-plus').hide();
+          $(this).prev().find('.fa-minus').show();
+      }).on('hide.bs.collapse', function () {
+          $(this).prev().find('.fa-plus').show();
+          $(this).prev().find('.fa-minus').hide();
+      });
   });
 </script>
 </body>
