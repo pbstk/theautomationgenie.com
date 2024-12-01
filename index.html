@@ -64,12 +64,18 @@
     }
 
     /* Image and content styling */
-    .image-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 80px 0;
-    }
+
+  .image-content {
+    display: flex;
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Center images vertically */
+    flex-wrap: wrap; /* Allow wrapping to a new line */
+    gap: 20px; /* Space between images */
+    margin: 080px auto; /* Center the container itself */
+    max-width: 800px; /* Optional: Set a max width for the images container */
+    text-align: center; /* Center-align any text if present */
+}
+
 
     .image-item {
       flex: 0 0 30%;
@@ -78,10 +84,10 @@
     }
 
     .image-item img {
-      width: 100%;
-      height: auto;
-      max-width: 150px;
-      margin-bottom: 10px;
+      width: 150px; /* Fixed width */
+      height: 150px; /* Fixed height */
+      object-fit: cover; /* Maintain aspect ratio without distortion */
+      border-radius: 10px; /* Optional: Add rounded corners */
     }
 
     .image-item h4 {
@@ -197,22 +203,22 @@
       <p>With years of experience, we have established ourselves as leaders in modernizing legacy systems and automation.</p>
     </div>
     <div class="image-item">
-      <img src="image3.jpg" alt="Image 3">
+      <img src="image3.png" alt="Image 3">
       <h4>Seamless Integration</h4>
       <p>Our services seamlessly integrate with your existing infrastructure to create a smooth transition and reduce disruption.</p>
     </div>
     <div class="image-item">
-      <img src="image4.jpg" alt="Image 4">
+      <img src="image4.png" alt="Image 4">
       <h4>Commitment to Quality</h4>
       <p>We prioritize quality at every stage, ensuring high standards in all our services to deliver unmatched results.</p>
     </div>
     <div class="image-item">
-      <img src="image5.jpg" alt="Image 5">
+      <img src="image5.png" alt="Image 5">
       <h4>Innovative Approach</h4>
       <p>Our innovative solutions adapt to the unique needs of your business, enabling sustainable growth and efficiency.</p>
     </div>
     <div class="image-item">
-      <img src="image6.jpg" alt="Image 6">
+      <img src="image6.png" alt="Image 6">
       <h4>Scalable Solutions</h4>
       <p>Our services are built to scale with your business, ensuring long-term success and flexibility.</p>
     </div>
