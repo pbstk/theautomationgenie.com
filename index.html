@@ -74,17 +74,19 @@
     gap: 20px; /* Space between images */
     margin: 080px auto; /* Center the container itself */
     max-width: 800px; /* Optional: Set a max width for the images container */
-    text-align: center; /* Center-align any text if present */
+    text-align: justify; /* Center-align any text if present */
 }
 
 
     .image-item {
-      display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align content */
-    text-align: center; /* Center text */
-    width: calc(33.33% - 20px); /* Three items per row with spacing */
-    box-sizing: border-box; /* Include padding and border in width */
+      flex: 1 1 calc(33.33% - 20px);
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  justify-content: flex-start;
+  height: 300px; /* Set a fixed height for uniformity */
+  box-sizing: border-box;
+  display: flex;
     }
 
     .image-item img {
@@ -95,14 +97,15 @@
     }
 
     .image-item h4 {
-      max-width: 100%;
-      height: auto;
+      margin: 10px 0;
+  font-size: 1.2rem;
     }
 
     .image-item p {
-      font-size: 1rem; /* Ensure consistent paragraph font size */
-    text-align: justify; /* Justify the paragraph text */
-    margin: 0; /* Remove unnecessary margin */
+      margin: 0;
+  padding: 5px;
+  font-size: 1rem;
+  text-align: justify; /* Optional: Justify text for a polished look */
     }
 
     /* Blue banner styling */
@@ -207,7 +210,7 @@
     <div class="image-item">
       <img src="image2.png" alt="Image 2">
       <h4>Trusted Expertise</h4>
-      <p>With a proven foundation of innovation and a strong focus on modernization, we are on a mission to become leaders in transforming legacy systems and automation.</p>
+      <p>With a proven foundation of innovation and a strong focus on modernization, we are on a mission to become leaders in transforming legacy systems.</p>
     </div>
     <div class="image-item">
       <img src="image3.png" alt="Image 3">
